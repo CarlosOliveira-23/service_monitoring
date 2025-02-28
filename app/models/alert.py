@@ -8,6 +8,6 @@ class Alert(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     service_id = Column(Integer, ForeignKey("services.id"), nullable=False)
-    status = Column(String, nullable=False)  # "down"
+    status = Column(String, nullable=False)
     message = Column(String, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())

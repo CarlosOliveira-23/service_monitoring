@@ -9,7 +9,6 @@ from app.schemas.alert import AlertCreate, AlertResponse
 router = APIRouter()
 
 
-# Dependency to get DB session
 def get_db():
     db = SessionLocal()
     try:
